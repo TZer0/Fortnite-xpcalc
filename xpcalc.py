@@ -73,7 +73,7 @@ def xpCalc(startString, end):
 
 start = sys.argv[1]
 if len(sys.argv) == 2:
-	xpCalc(start, 150)
+	xpCalc(start, 200)
 	xpCalc(start, 225)
 else:
 	for v in sys.argv[2:]:

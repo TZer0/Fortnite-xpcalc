@@ -22,6 +22,8 @@ def addBonusXp(amount, desc):
 	modifiers += amount
 
 addBonusXp(daysLeft * 66000, "daily 3*22 k")
+for i in range(int(daysLeft/7)):
+    addBonusXp(35000 + 4 * 24500 + 24000*7, "Weekly legendary/epic in " + str(i + 1) + " week")
 print("Estimated bonus xp: %d" % (modifiers))
 print()
 
@@ -73,7 +75,6 @@ def xpCalc(startString, end):
 
 start = sys.argv[1]
 if len(sys.argv) == 2:
-	xpCalc(start, 200)
 	xpCalc(start, 225)
 else:
 	for v in sys.argv[2:]:

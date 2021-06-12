@@ -21,7 +21,8 @@ def addBonusXp(amount, desc):
 	print("Bonus: %d xp - %s" % (amount, desc))
 	modifiers += amount
 
-addBonusXp(daysLeft * 17000, "daily 3*17 k")
+addBonusXp(daysLeft * 3 * 17000, "daily quest 3*17 k")
+addBonusXp(daysLeft * 5 * 25200, "daily creative 5*25.2 k")
 for i in range(int(daysLeft/7)):
     addBonusXp(45000 + 4 * 30500 + 30000*8, "Weekly legendary/epic in " + str(i + 1) + " week(s)")
 print("Estimated bonus xp: %d" % (modifiers))

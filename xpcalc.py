@@ -1,6 +1,6 @@
 import sys
 import datetime
-daysLeft =  (datetime.date(2021, 9, 12) - datetime.date.today()).days
+daysLeft =  (datetime.date(2021, 12, 5) - datetime.date.today()).days
 matchXp = 9000
 print(datetime.datetime.now())
 
@@ -21,10 +21,10 @@ def addBonusXp(amount, desc):
 	print("Bonus: %d xp - %s" % (amount, desc))
 	modifiers += amount
 
-addBonusXp(daysLeft * 3 * 17000, "daily quest 3*17 k")
-addBonusXp(daysLeft * 5 * 25200, "daily creative 5*25.2 k")
+addBonusXp(daysLeft * 2 * 17000, "daily punchcard 2*17 k")
+addBonusXp(daysLeft * 5 * 25200 + 17000, "daily creative 5*25.2 + 17 k")
 for i in range(int(daysLeft/7)):
-    addBonusXp(45000 + 4 * 30500 + 30000*8, "Weekly legendary/epic in " + str(i + 1) + " week(s)")
+    addBonusXp(65000*3, "Weekly punchcard " + str(i + 1) + " week(s)")
 print("Estimated bonus xp: %d" % (modifiers))
 print()
 
@@ -76,7 +76,7 @@ def xpCalc(startString, end):
 
 start = sys.argv[1]
 if len(sys.argv) == 2:
-	xpCalc(start, 225)
+	xpCalc(start, 200)
 else:
 	for v in sys.argv[2:]:
 		xpCalc(start, int(v))

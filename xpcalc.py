@@ -21,10 +21,10 @@ def addBonusXp(amount, desc):
 	print("Bonus: %d xp - %s" % (amount, desc))
 	modifiers += amount
 
-addBonusXp(daysLeft * 3 * 30000, "daily punchcard 3*30 k")
-addBonusXp(daysLeft * 5 * 25200, "daily creative 5*25.2 + 17 k")
+addBonusXp(daysLeft * 3 * 30000, "daily punchcard")
+addBonusXp(daysLeft * 5 * 25200, "daily creative")
 for i in range(int(daysLeft/7)):
-    addBonusXp(50000*3, "Weekly punchcard " + str(i + 1) + " week(s)")
+    addBonusXp(75000*3, "Weekly punchcard " + str(i + 1) + " week(s)")
 print("Estimated bonus xp: %d" % (modifiers))
 print()
 

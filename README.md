@@ -15,8 +15,8 @@ python xpcalc.py 112.5
 Same, but for level 60 to level 100 and level 120.
 ```
 python xpcalc.py 60 100 120
-
 ```
+
 Sample output:
 ```
 $ python xpcalc.py 60 100 120
